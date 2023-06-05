@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 ---
 
-# Congratulations!
+# How to create payment links
 
 You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
 
@@ -12,7 +12,7 @@ Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage
 
 Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
 
-## What's next?
+## Transfer funds from your wallet into your account for withdrawal
 
 - Read the [official documentation](https://docusaurus.io/)
 - Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)

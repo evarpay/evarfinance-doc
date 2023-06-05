@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# Making Payments
 
 Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
 
-## Create your first Post
+## Make payments to your merchant using the evarfinance checkout
 
 Create a file at `blog/2021-02-28-greetings.md`:
 
