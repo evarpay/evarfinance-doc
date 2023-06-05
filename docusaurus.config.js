@@ -88,7 +88,7 @@ const config = {
             "aria-label": "Instagram",
           },
           {
-            href: "https://github.com/evarpay/evarfinance-doc/tree/main",
+            href: "https://www.linkedin.com/company/evarfinance/",
             className: "header-linkedin-link",
             "aria-label": "LinkedIn",
             position: "right",
