@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# How to create payment links
+# How to receive payments
 
 You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
 
