@@ -1,4 +1,4 @@
-# Evarfinance ![signin page](./static/img/logo.svg)
+# ![signin page](./static/img/logo.svg) Evarfinance
 
 This is the official documentation for the Evarfinance app
 
