@@ -1,6 +1,6 @@
-# Website
+# ![signin page](./static/img/logo.svg) Evarfinance
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is the official documentation for the Evarfinance app
 
 ### Installation
 

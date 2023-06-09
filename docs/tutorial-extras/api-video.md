@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# How to integrate Evarfinance Checkout
+# Integrating Evarfinance Checkout
 
 You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
 
