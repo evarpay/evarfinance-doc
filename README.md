@@ -1,5 +1,11 @@
-# ![signin page](./static/img/logo.svg) Evarfinance
+# Evarfinance
 
+<div style={{textAlign: 'center'}}>
+
+![signin page](./static/img/logo.svg)
+
+  </div>
+<br/>
 This is the official documentation for the Evarfinance app
 
 ### Installation
