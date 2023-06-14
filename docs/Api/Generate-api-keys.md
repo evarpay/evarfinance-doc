@@ -22,7 +22,7 @@ To initiate the process, follow the steps below to create an account on Evarfina
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/signin_page.png)
+  ![signin page](../Api/img/signin_desktop.png)
 
   </div>
 
@@ -30,7 +30,7 @@ To initiate the process, follow the steps below to create an account on Evarfina
 
   <div style={{textAlign: 'center'}}>
 
-  ![signup page](./img/signup_page_2.png)
+  ![signup page](../Api/img/signup_desktop.png)
 
   </div>
 
@@ -40,7 +40,7 @@ To initiate the process, follow the steps below to create an account on Evarfina
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/signin_page.png)
+  ![signin page](../Api/img/signin_desktop.png)
 
   </div>
 
@@ -50,15 +50,15 @@ To initiate the process, follow the steps below to create an account on Evarfina
 
   <div style={{textAlign: 'center'}}>
 
-  ![dashboard](./img/user_profile.png)
+  ![signin page](../Api/img/User_profile_desktop.png)
 
   </div>
 
-- On the profile page click on the **Generate keys** button and insert your website url. Example: http://localhost.com
+- On the profile page, under the Api section click on the **Generate keys** button and insert your website url. Example: http://localhost.com
 
   <div style={{textAlign: 'center'}}>
 
-  ![dashboard](./img/api_keys_url.png)
+  ![signin page](../Api/img/api_url_desktop.png)
 
   </div>
 

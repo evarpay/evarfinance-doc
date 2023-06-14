@@ -18,7 +18,7 @@ To transfer your funds to your desired wallet, please sign into your account wit
 
 <div style={{textAlign: 'center'}}>
 
-![signin page](../Api/img/signin_page.png)
+![signin page](../Api/img/signin_desktop.png)
 
 </div>
 
@@ -28,7 +28,7 @@ To transfer your funds to your desired wallet, please sign into your account wit
 
   <div style={{textAlign: 'center'}}>
 
-  ![dashboard](../tutorial-basics/img/transfer_out.png)
+  ![signin page](../Api/img/dashboard_desktop.png)
 
   </div>
 
@@ -36,7 +36,7 @@ To transfer your funds to your desired wallet, please sign into your account wit
 
   <div style={{textAlign: 'center'}}>
 
-  ![transfer money out](../tutorial-basics/img/transfer_out_form.png)
+  ![signin page](../Api/img/transfer_money_out_desktop.png)
 
   </div>
 
@@ -44,13 +44,13 @@ To transfer your funds to your desired wallet, please sign into your account wit
 
   <div style={{textAlign: 'center'}}>
 
-  ![transfer money out](../tutorial-basics/img/auth_step_1.png)
+  ![signin page](../Api/img/auth_1_desktop.png)
 
   </div>
 
   <div style={{textAlign: 'center'}}>
 
-  ![transfer money out](../tutorial-basics/img/auth_step_2.png)
+  ![signin page](../Api/img/auth_2_desktop.png)
 
   </div>
 
@@ -58,6 +58,6 @@ To transfer your funds to your desired wallet, please sign into your account wit
 
   <div style={{textAlign: 'center'}}>
 
-  ![transfer money out](../tutorial-basics/img/returning_user.png)
+  ![signin page](../Api/img/auth_3_desktop.png)
 
   </div>
