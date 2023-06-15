@@ -55,3 +55,13 @@ In this video series we wil guide you through on how to make payment to your cre
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/ZMkvny49q1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br/>
+
+## Series 4: How to Transfer Money Out on Evarfinance
+
+In this video series we wil guide you through on how to transfer funds out as a merchant to your account.
+
+<br/>
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/v9pMk6n6kSQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br/>
