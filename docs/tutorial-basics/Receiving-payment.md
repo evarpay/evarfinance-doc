@@ -14,7 +14,7 @@ To get started, you would need to create an account on evarfinance and to do tha
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](../Api/img/signin_page.png)
+  ![signin page](../Api/img/signin_desktop.png)
 
   </div>
 
@@ -23,7 +23,7 @@ To get started, you would need to create an account on evarfinance and to do tha
 
   <div style={{textAlign: 'center'}}>
 
-  ![signup page](../Api/img/signup_page_2.png)
+  ![signup page](../Api/img/signup_desktop.png)
 
   </div>
 
@@ -37,7 +37,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](../Api/img/signin_page.png)
+  ![signin page](../Api/img/signin_desktop.png)
 
   </div>
 
@@ -45,7 +45,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/dashboard.png)
+  ![signin page](../Api/img/dashboard_desktop.png)
 
   </div>
 
@@ -53,7 +53,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/generate_links.png)
+  ![signin page](../Api/img/Payment_link_modal_desktop.png)
 
   </div>
 
@@ -63,7 +63,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/one_time_link.png)
+  ![signin page](../Api/img/one_time_link_desktop.png)
 
   </div>
 
@@ -71,7 +71,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/reusable_link.png)
+  ![signin page](../Api/img/reusable_link_desktop.png)
 
   </div>
 
@@ -81,7 +81,7 @@ Now, that you have created your account on evarfinance, you can now go ahead to 
 
   <div style={{textAlign: 'center'}}>
 
-  ![signin page](./img/payment_links.png)
+  ![signin page](../Api/img/links_list_desktop.png)
 
   </div>
 
