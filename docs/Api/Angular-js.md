@@ -78,9 +78,15 @@ export class MyComponentComponent implements OnInit {
 
 ```
 
-- In the code above, the ngOnInit method is used to initialize the Evarfinance Checkout module when the component is initialized. The api_key and app_id should be replaced with your actual API key and app ID provided by Evarfinance.
+:::note please note
 
-- In the template, the **openPayment** method is bound to the button's (click) event. When the button is clicked, it calls the **openPayment** method, which in turn calls the **EvarfinanceCheckout.open** function to trigger the payment process.
+- In the code above, the ngOnInit method is used to initialize the Evarfinance Checkout module when the component is initialized.
+
+- The **openPayment** method is bound to the button's (click) event. When the button is clicked, it calls the **openPayment** method, which in turn calls the **EvarfinanceCheckout.open** function to trigger the payment process.
+
+:::
+
+### Add a button
 
 In the ***checkout.component.html*** file, add the necessary HTML markup and Angular bindings for your checkout component. Include a button to trigger the payment process:
 
@@ -90,9 +96,16 @@ In the ***checkout.component.html*** file, add the necessary HTML markup and Ang
   <button (click)="openPayment()">Pay Now</button>
 </div>
 ```
+
+:::note please note
+
 - Customize the component content and button as per your specific design and functionality requirements.
 
-In the main app.module.ts file, import the CheckoutComponent and add it to the declarations array:
+:::
+
+### Import the CheckoutComponent
+
+In the main **app.module.ts** file, import the CheckoutComponent and add it to the declarations array:
 
 ```ts title="app.module.ts"
 import { BrowserModule } from '@angular/platform-browser';
@@ -114,7 +127,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
 export class AppModule { }
 
 ```
+:::note please note
 
 - And also remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the component file with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
+
+:::

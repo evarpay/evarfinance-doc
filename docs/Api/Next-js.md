@@ -28,7 +28,7 @@ yarn add evarfinance-checkout
 
 - Create a new JavaScript file called **evarfinance.js** in your Next.js project's utils folder (you can create the utils folder if it doesn't exist).
 
-- In the evarfinance.js file, import the Evarfinance Checkout module and create a function to initialize it:
+- In the **evarfinance.js** file, import the Evarfinance Checkout module and create a function to initialize it:
 
 ```js title="evarfinance.js"
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
@@ -58,7 +58,7 @@ export function initEvarfinanceCheckout() {
 
 ### Import the function into your preferred page
 
-- Import the **initEvarfinanceCheckout** function in your Next.js page file where you want to use the Evarfinance Checkout module:
+- Import the **initEvarfinanceCheckout** function in your ***Next.js*** page file where you want to use the Evarfinance Checkout module:
 
 ```jsx title="myPage.js"
 import { useEffect } from 'react';
@@ -76,7 +76,7 @@ export default MyPage;
 ```
 ### Add a button
 
-- Update the **MyPage** component in your Next.js page file to include a button and a function to be called when the button is clicked :
+- Update the **MyPage** component in your **Next.js** page file to include a button and a function to be called when the button is clicked :
 
 ```jsx title="myPage.js"
 import { useEffect } from 'react';
@@ -104,13 +104,13 @@ export default MyPage;
 ```
 - In the updated code, a handlePayment function is added to handle the button click event. Inside this function, the **EvarfinanceCheckout.open()** method is called to trigger the payment process.
 
-:::tip quick tip
+:::note please note
 
-In the example above, the useEffect hook is used to call the **initEvarfinanceCheckout** function when the component is mounted. This ensures that the Evarfinance Checkout module is initialized correctly.
-:::
+- In the example above, the useEffect hook is used to call the **initEvarfinanceCheckout** function when the component is mounted. This ensures that the Evarfinance Checkout module is initialized correctly.
 
-- Customize the MyPage component and the **initEvarfinanceCheckout** function to suit your specific design and functionality requirements.
+- Customize the **MyPage** component and the **initEvarfinanceCheckout** function to suit your specific design and functionality requirements.
 
 - Remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **MyComponent file** with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
+:::

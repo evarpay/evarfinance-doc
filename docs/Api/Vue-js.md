@@ -25,7 +25,7 @@ yarn add evarfinance-checkout
 ```
 ### Import the library
 
-Import the library in your Vue component file:
+Import the library in your Vue component file (e.g., **app.js**) :
 
 ```html title="app.js"
 <template>
@@ -111,6 +111,8 @@ export default {
 
 ```
 
+:::note please note
+
 - When the button is clicked, it triggers the **startPayment** method, which initializes the Evarfinance Checkout module with the specified parameters.
 
 - Customize the **startPayment** method and the template section of your Vue component to suit your specific design and functionality requirements.
@@ -118,3 +120,5 @@ export default {
 - Remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the component file with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
+
+:::

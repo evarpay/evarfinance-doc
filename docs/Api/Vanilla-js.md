@@ -14,15 +14,15 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Include the Evarfinance Checkout in your HTML
 
-Include the Evarfinance Checkout library in your HTML file by adding the following script tag:
+Include the Evarfinance Checkout library in your HTML file (e.g., **index.html**)  by adding the following script tag:
 
 ```html title="index.html"
-<script src="https://path/to/evarfinance-checkout/build/main.js"></script>
+<script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"></script>
 ```
 
 ### Create a JavaScript file
 
-Create a JavaScript file (e.g., app.js) and add the following code to initialize the Evarfinance Checkout module and handle the button click event:
+Create a JavaScript file (e.g., **app.js**) and add the following code to initialize the Evarfinance Checkout module and handle the button click event:
 
 ```js title="app.js"
 function initEvarfinanceCheckout() {
@@ -49,7 +49,7 @@ function initEvarfinanceCheckout() {
 document.addEventListener('DOMContentLoaded', function() {
   initEvarfinanceCheckout();
 
-  var paymentButton = document.getElementById('paymentButton');
+  const paymentButton = document.getElementById('paymentButton');
 
   paymentButton.addEventListener('click', function() {
     EvarfinanceCheckout.open();
@@ -58,17 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 ```
 
-:::tip QUICK TIP
+:::note please note
 
-In the above code we wait for the DOM content to load and then call the initEvarfinanceCheckout function when the DOM is ready.
+- In the above code we wait for the DOM content to load and then call the initEvarfinanceCheckout function when the DOM is ready.
 
-We also got a reference to the payment button and called the Evarfinance Checkout module when the button is clicked.
+- We also got a reference to the payment button and called the Evarfinance Checkout module when the button is clicked.
 
 :::
 
 ### Update the HTML file
 
-- In the HTML file, include a button element with an id of paymentButton:
+- In the HTML file, include a button element with an ***id*** of **paymentButton**:
 
 ```html title="index.html"
 <button id="paymentButton">Pay Now</button>
@@ -78,10 +78,30 @@ We also got a reference to the payment button and called the Evarfinance Checkou
 ```html title="index.html"
 <script src="path/to/app.js"></script>
 ```
-- Now you are good to go.
+- Now you are good to go and your **index.html** file should look like this:
+
+```html title="index.html"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvarFinance Checkout</title>
+</head>
+<body>
+    <!-- your components and page content should go here -->
+    <button id="paymentButton">Pay Now</button>
+    <script src="path/to/app.js"></script>
+    <script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"></script>
+</body>
+</html>
+```
+:::note please note
 
 - Replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **app.js** file with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
 
 - Customize the code to suit your specific design and functionality requirements. You can modify the button styling, add additional event listeners, or include other elements as needed.
+
+:::

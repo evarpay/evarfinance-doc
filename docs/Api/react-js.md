@@ -25,7 +25,7 @@ yarn add evarfinance-checkout
 ```
 ### Import the library
 
-Import the necessary modules in your React component file:
+Import the necessary modules in your React component file (e.g., **app.jsx**):
 
 ```js title="app.jsx"
 import React, { useEffect } from 'react';
@@ -33,11 +33,11 @@ import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 ```
 ### Create a functional component
 
-Create a functional component (e.g., MyComponent) to encapsulate your checkout functionality:
+Create a functional component (e.g., **MyComponent**) to encapsulate your checkout functionality:
 
-- Within the component, use the useEffect hook to initialize the Evarfinance Checkout module when the component is mounted. The initialization code is placed inside the useEffect callback function. 
+- Within the component, use the **useEffect hook** to initialize the Evarfinance Checkout module when the component is mounted. The initialization code is placed inside the useEffect callback function. 
 
-- In the component's JSX, include the button (or any other element) that triggers the payment process when clicked. In this example, the onClick event is assigned the EvarfinanceCheckout.open function, which opens the Evarfinance Checkout modal.
+- In the component's JSX, include the button (or any other element) that triggers the payment process when clicked. In this example, the onClick event is assigned the **EvarfinanceCheckout.open** function, which opens the Evarfinance Checkout modal.
 
 ```jsx title="app.jsx"
 const MyComponent = () => {
@@ -73,10 +73,9 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
-:::tip quick tip
+:::note please note
 
-In the example above, the useEffect hook is used to call the initEvarfinanceCheckout function when the component is mounted. This ensures that the Evarfinance Checkout module is initialized correctly.
-:::
+- In the example above, the **useEffect hook** is used to call the **initEvarfinanceCheckout** function when the component is mounted. This ensures that the Evarfinance Checkout module is initialized correctly.
 
 - Customize the component content and button as per your specific design and functionality requirements. You can add additional components, styles, or logic within the component.
 
@@ -85,3 +84,4 @@ In the example above, the useEffect hook is used to call the initEvarfinanceChec
 - Remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **MyComponent file** with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
+:::

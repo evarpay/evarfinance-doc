@@ -20,7 +20,7 @@ Add CDN script tag with the evarfinance url
 <script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"> </script>
 ```
 
-### checkout container
+### Checkout container
 
 Initialize the evarfinance checkout container on your checkout page. this can be done with click of a button
 
