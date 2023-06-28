@@ -14,21 +14,20 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Install the evarfinance checkout library
 
-Install the Evarfinance Checkout library as a dependency by running the following command in your terminal:
+Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
 
-```bash
+```bash title="npm"
 npm install evarfinance-checkout
 ```
-or
 
-```bash
+```bash title="yarn"
 yarn add evarfinance-checkout
 ```
 ### Import the library
 
 Import the library in your Vue component file:
 
-```html
+```html title="app.js"
 <template>
   <div>
     <!-- Your component content here -->
@@ -68,7 +67,7 @@ export default {
 
 In the template section of your Vue component, you can add a button or any other element that triggers the payment process:
 
-```html
+```html title="app.js"
 <template>
   <div>
     <button @click="startPayment">Pay Now</button>
@@ -76,11 +75,11 @@ In the template section of your Vue component, you can add a button or any other
 </template>
 ```
 
-### Define the 'startPayment' function
+### Define the 'startPayment' method
 
 In the script section of your Vue component, define the startPayment method that triggers the payment process:
 
-```html
+```html title="app.js"
 <script>
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 

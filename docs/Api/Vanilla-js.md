@@ -16,7 +16,7 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 Include the Evarfinance Checkout library in your HTML file by adding the following script tag:
 
-```html
+```html title="index.html"
 <script src="https://path/to/evarfinance-checkout/build/main.js"></script>
 ```
 
@@ -24,7 +24,7 @@ Include the Evarfinance Checkout library in your HTML file by adding the followi
 
 Create a JavaScript file (e.g., app.js) and add the following code to initialize the Evarfinance Checkout module and handle the button click event:
 
-```js
+```js title="app.js"
 function initEvarfinanceCheckout() {
   EvarfinanceCheckout.init({
     api_key: 'YOUR API KEY',
@@ -70,15 +70,15 @@ We also got a reference to the payment button and called the Evarfinance Checkou
 
 - In the HTML file, include a button element with an id of paymentButton:
 
-```html
+```html title="index.html"
 <button id="paymentButton">Pay Now</button>
 ```
+- Also in the HTML file, include the path to the app.js file:
 
-- In the HTML file, include a button element with an id of paymentButton:
-
-```html
+```html title="index.html"
 <script src="path/to/app.js"></script>
 ```
+- Now you are good to go.
 
 - Replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **app.js** file with your actual **API key** and **APP ID** provided by Evarfinance.
 

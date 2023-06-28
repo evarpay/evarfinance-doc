@@ -14,21 +14,28 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Install the evarfinance checkout library
 
-Install the Evarfinance Checkout library as a dependency by running the following command in your terminal:
+Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
 
-```bash
+```bash title="npm"
 npm install evarfinance-checkout
 ```
-or
 
-```bash
+```bash title="yarn"
 yarn add evarfinance-checkout
+```
+### Create a new Angular component
+Create a new Angular component for your checkout functionality. Open a terminal and navigate to your Angular project directory. Run the following command to generate a new component:
+
+```bash title="bash"
+ng generate component checkout
 ```
 ### Import the modules
 
-Import the Evarfinance Checkout module in your Angular component file:
+- In the ***app.component.html*** file, add the component selector <app-checkout></app-checkout> to include the checkout component in your main application template.
 
-```js
+- Open the generated **checkout** component file ***checkout.component.ts***. Import the necessary modules and define the component class as shown below:
+
+```js title="checkout.component.ts"
 import { Component, OnInit } from '@angular/core';
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 
@@ -73,20 +80,40 @@ export class MyComponentComponent implements OnInit {
 
 - In the code above, the ngOnInit method is used to initialize the Evarfinance Checkout module when the component is initialized. The api_key and app_id should be replaced with your actual API key and app ID provided by Evarfinance.
 
-Create a button in the Angular component's template (my-component.component.html) to trigger the payment process:
+- In the template, the **openPayment** method is bound to the button's (click) event. When the button is clicked, it calls the **openPayment** method, which in turn calls the **EvarfinanceCheckout.open** function to trigger the payment process.
 
-```html
+In the ***checkout.component.html*** file, add the necessary HTML markup and Angular bindings for your checkout component. Include a button to trigger the payment process:
+
+```html title="checkout.component.html"
 <div>
   <!-- Your component content here -->
   <button (click)="openPayment()">Pay Now</button>
 </div>
 ```
-
-- In the template, the **openPayment** method is bound to the button's (click) event. When the button is clicked, it calls the **openPayment** method, which in turn calls the **EvarfinanceCheckout.open** function to trigger the payment process.
-
 - Customize the component content and button as per your specific design and functionality requirements.
 
-- Make sure to add the **MyComponentComponent** to the appropriate Angular module.
+In the main app.module.ts file, import the CheckoutComponent and add it to the declarations array:
+
+```ts title="app.module.ts"
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    CheckoutComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
 
 - And also remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the component file with your actual **API key** and **APP ID** provided by Evarfinance.
 

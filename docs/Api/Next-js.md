@@ -14,14 +14,13 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Install the evarfinance checkout library
 
-Install the Evarfinance Checkout library as a dependency by running the following command in your terminal:
+Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
 
-```bash
+```bash title="npm"
 npm install evarfinance-checkout
 ```
-or
 
-```bash
+```bash title="yarn"
 yarn add evarfinance-checkout
 ```
 
@@ -31,7 +30,7 @@ yarn add evarfinance-checkout
 
 - In the evarfinance.js file, import the Evarfinance Checkout module and create a function to initialize it:
 
-```js
+```js title="evarfinance.js"
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 
 export function initEvarfinanceCheckout() {
@@ -61,7 +60,7 @@ export function initEvarfinanceCheckout() {
 
 - Import the **initEvarfinanceCheckout** function in your Next.js page file where you want to use the Evarfinance Checkout module:
 
-```js
+```jsx title="myPage.js"
 import { useEffect } from 'react';
 import { initEvarfinanceCheckout } from '../utils/evarfinance';
 
@@ -79,7 +78,7 @@ export default MyPage;
 
 - Update the **MyPage** component in your Next.js page file to include a button and a function to be called when the button is clicked :
 
-```jsx
+```jsx title="myPage.js"
 import { useEffect } from 'react';
 import { initEvarfinanceCheckout } from '../utils/evarfinance';
 

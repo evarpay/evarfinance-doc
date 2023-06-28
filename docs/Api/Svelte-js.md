@@ -14,15 +14,13 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Install the evarfinance checkout library
 
-Install the Evarfinance Checkout library as a dependency by running the following command in your terminal:
+Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
 
-```bash
+```bash title="npm"
 npm install evarfinance-checkout
 ```
 
-or
-
-```bash
+```bash title="yarn"
 yarn add evarfinance-checkout
 ```
 ### Create a new Svelte component
@@ -31,7 +29,7 @@ yarn add evarfinance-checkout
 
 - Import the necessary modules in your Payment.svelte component file:
 
-```html
+```html title="Payment.svelte"
 <script>
   import { onMount } from 'svelte';
   import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';

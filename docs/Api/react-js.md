@@ -14,21 +14,20 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 ### Install the evarfinance checkout library
 
-Install the Evarfinance Checkout library as a dependency by running the following command in your terminal:
+Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
 
-```bash
+```bash title="npm"
 npm install evarfinance-checkout
 ```
-or
 
-```bash
+```bash title="yarn"
 yarn add evarfinance-checkout
 ```
 ### Import the library
 
 Import the necessary modules in your React component file:
 
-```js
+```js title="app.jsx"
 import React, { useEffect } from 'react';
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 ```
@@ -40,7 +39,7 @@ Create a functional component (e.g., MyComponent) to encapsulate your checkout f
 
 - In the component's JSX, include the button (or any other element) that triggers the payment process when clicked. In this example, the onClick event is assigned the EvarfinanceCheckout.open function, which opens the Evarfinance Checkout modal.
 
-```jsx
+```jsx title="app.jsx"
 const MyComponent = () => {
   useEffect(() => {
     // Initialize the Evarfinance Checkout module
