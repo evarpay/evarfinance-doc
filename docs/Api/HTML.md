@@ -16,7 +16,7 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 Add CDN script tag with the evarfinance url
 
-```bash
+```html
 <script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"> </script>
 ```
 
@@ -28,7 +28,7 @@ Initialize the evarfinance checkout container on your checkout page. this can be
 
 - Replace the amount, title, customer_email_address, and customer_full_name with the correct details.
 
-```bash
+```html
  <evarfinance-checkout-container
         embedded="true"
         config='{
@@ -45,8 +45,8 @@ Initialize the evarfinance checkout container on your checkout page. this can be
 
 - This is what your index.html file should look like
 
-```bash
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
