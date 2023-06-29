@@ -64,7 +64,6 @@ yarn add evarfinance-checkout
 
 <main>
   <!-- Your component content here -->
-  <button on:click="{openPayment}">Pay Now</button>
 </main>
 
 <style>
@@ -74,13 +73,15 @@ yarn add evarfinance-checkout
 
 :::note please note
 
-In the **onMount** function, initialize the Evarfinance Checkout module with the desired configuration.
+- In the **onMount** function, initialize the Evarfinance Checkout module with the desired configuration.
+
+- Also, an **openPayment** function is added to handle the button click event. Inside this function, the **EvarfinanceCheckout.open()** method is called to trigger the payment process.
 
 :::
 
 ### Add a button
 
-Create a button in the component's template **(Payment.svelte)** that triggers the payment process when clicked. The on:click event is bound to the openPayment function, which calls **EvarfinanceCheckout.open()**.
+Create a button in the component's template **(Payment.svelte)** that triggers the payment process when clicked. The on:click event is bound to the **openPayment** function, which calls **EvarfinanceCheckout.open()**.
 
 ```html title="Payment.svelte"
 <main>
@@ -96,7 +97,5 @@ Create a button in the component's template **(Payment.svelte)** that triggers t
 - Replace **'YOUR API KEY'** and **'YOUR APP ID'** in the component file with your actual **API key** and **APP ID** provided by Evarfinance.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
-
-- Use the Payment component in your main application or any other relevant component.
 
 :::
