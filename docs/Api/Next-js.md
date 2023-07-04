@@ -1,10 +1,10 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 # Next js
 
-This is an elaborate documentation for integrating the Evarfinance Checkout module into a Next.js application. This guide should walk you through all you need to know to integrate the checkout into your Next.js application with ease.
+This is a detailed step by step documentation for integrating the Evarfinance Checkout module into a Next.js application. This guide should walk you through all you need to know to embed the checkout into your Next.js application.
 
 :::tip API keys
 
@@ -12,9 +12,24 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 :::
 
-### Install the evarfinance checkout library
+### Step 1: Set up a new Next.js Project
 
-Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
+- Initialize a new Next.js project by running the following command in your terminal.
+
+- Set up the necessary project dependencies and configure your development environment.
+
+```bash title="bash"
+npx create-next-app my-next-app
+```
+
+:::note please note
+You can skip this step if you are embedding the checkout into an already existing Next.js project.
+:::
+
+### Step 2: Install the evarfinance checkout library
+
+- Open a terminal or command prompt in your project directory.
+- Run any of the following command to install the Evarfinance Checkout package:
 
 ```bash title="npm"
 npm install evarfinance-checkout
@@ -24,7 +39,7 @@ npm install evarfinance-checkout
 yarn add evarfinance-checkout
 ```
 
-### Create a JavaScript file
+### Step 3: Create a new JavaScript file
 
 - Create a new JavaScript file called **evarfinance.js** in your Next.js project's utils folder (you can create the utils folder if it doesn't exist).
 
@@ -55,41 +70,27 @@ export function initEvarfinanceCheckout() {
 }
 
 ```
+:::note please note
 
-### Import the function into your preferred page
+- Customize the **api_key, app_id,** and other configuration options as per your Evarfinance account and payment requirements.
 
-- Import the **initEvarfinanceCheckout** function in your ***Next.js*** page file where you want to use the Evarfinance Checkout module:
+:::
 
-```jsx title="myPage.js"
-import { useEffect } from 'react';
-import { initEvarfinanceCheckout } from '../utils/evarfinance';
+### Step 4: Import the function into your preferred page
 
-const MyPage = () => {
-  useEffect(() => {
-    initEvarfinanceCheckout();
-  }, []);
+- Import the **initEvarfinanceCheckout** function in your ***Next.js*** page file where you want to use the Evarfinance Checkout module (e.g., **myPage.js**):
 
-  return <div>...</div>;
-};
-
-export default MyPage;
-```
-### Add a button
-
-- Update the **MyPage** component in your **Next.js** page file to include a button and a function to be called when the button is clicked :
+- Update the **MyPage** component in your **Next.js** page file to include a button and a function to be called when the button is clicked:
 
 ```jsx title="myPage.js"
 import { useEffect } from 'react';
 import { initEvarfinanceCheckout } from '../utils/evarfinance';
 
 const MyPage = () => {
-  useEffect(() => {
-    initEvarfinanceCheckout();
-  }, []);
 
   const handlePayment = () => {
     // Call the Evarfinance Checkout module when the button is clicked
-    EvarfinanceCheckout.open();
+    initEvarfinanceCheckout();
   };
 
   return (
@@ -102,15 +103,16 @@ const MyPage = () => {
 
 export default MyPage;
 ```
-- In the updated code, a handlePayment function is added to handle the button click event. Inside this function, the **EvarfinanceCheckout.open()** method is called to trigger the payment process.
+:::tip quick tip
+- In the **myPage.js** file, a handlePayment function is added to handle the button click event. Inside this function, the **initEvarfinanceCheckout()** method is called to trigger the payment process.
+:::
+
+- That's it! You have successfully integrated the Evarfinance Checkout in your Next.js application. When you click the **"Pay Now"** button, the Evarfinance Checkout modal will open, and you can handle the payment events using the provided **onSuccess**, **onCancel**, and **onFailure** callback functions.
 
 :::note please note
+- Feel free to customize the component content and button as per your specific design and functionality requirements. You can add additional components, styles, or logic within the component.
 
-- In the example above, the useEffect hook is used to call the **initEvarfinanceCheckout** function when the component is mounted. This ensures that the Evarfinance Checkout module is initialized correctly.
-
-- Customize the **MyPage** component and the **initEvarfinanceCheckout** function to suit your specific design and functionality requirements.
-
-- Remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **MyComponent file** with your actual **API key** and **APP ID** provided by Evarfinance.
+- Remember to replace the placeholder values like **'YOUR API KEY'**, **'YOUR APP ID'**, **Email address**, and other details with your actual Evarfinance **API key**, **app ID**, and **customer information**.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
 :::

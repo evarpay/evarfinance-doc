@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
+sidebar_position: 8
 ---
 
 # Angular js
 
-This is an elaborate documentation for integrating the Evarfinance Checkout module into a Angular.js application. This guide should walk you through all you need to know to integrate the checkout into your Angular.js application with ease.
+This is a detailed step by step documentation for integrating the Evarfinance Checkout module into a Angular.js application. This guide should walk you through all you need to know to embed the checkout into your Angular.js application.
 
 :::tip API keys
 
@@ -12,9 +12,24 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 :::
 
-### Install the evarfinance checkout library
+### Step 1: Create an Angular Project
 
-Install the Evarfinance Checkout library as a dependency by running any of the following command in your terminal:
+- Initialize a new Angular project by running the following command in your terminal.
+- Set up the necessary project dependencies and configure your development environment.
+
+```bash title="bash"
+ng new my-angular-app
+
+```
+
+:::note please note
+You can skip this step if you are embedding the checkout into an already existing React.js project.
+:::
+
+### Step 2: Install the evarfinance checkout library
+
+- Open a terminal or command prompt in your project directory.
+- Run any of the following command to install the Evarfinance Checkout package:
 
 ```bash title="npm"
 npm install evarfinance-checkout
@@ -23,114 +38,108 @@ npm install evarfinance-checkout
 ```bash title="yarn"
 yarn add evarfinance-checkout
 ```
-### Create a new Angular component
-Create a new Angular component for your checkout functionality. Open a terminal and navigate to your Angular project directory. Run the following command to generate a new component:
 
-```bash title="bash"
-ng generate component checkout
-```
-### Import the modules
+### Step 3: Create an Initialization File
 
-- In the ***app.component.html*** file, add the component selector <app-checkout></app-checkout> to include the checkout component in your main application template.
+- Inside the **src** directory of your Angular project, create a new file called **evarfinance.ts** In this file, define the initialization function:
 
-- Open the generated **checkout** component file ***checkout.component.ts***. Import the necessary modules and define the component class as shown below:
-
-```js title="checkout.component.ts"
-import { Component, OnInit } from '@angular/core';
+```ts title="evarfinance.ts"
 import EvarfinanceCheckout from 'evarfinance-checkout/build/main.js';
 
+export function initializeEvarfinanceCheckout() {
+  EvarfinanceCheckout.init({
+    api_key: 'YOUR API KEY',
+    app_id: 'YOUR APP ID',
+    amount: '100',
+    title: 'Test Payment',
+    customer_email_address: 'customer1@example.com',
+    customer_full_name: 'Customer 1',
+    mode: 'DEVELOPMENT',
+    onSuccess: (response) => {
+      console.log('Payment succeeded', response);
+    },
+    onCancel: (response) => {
+      console.log('Payment canceled', response);
+    },
+    onFailure: (response) => {
+      console.log('Payment failed', response);
+    },
+  });
+}
+```
+
+:::note please note
+
+- Customize the **api_key, app_id,** and other configuration options as per your Evarfinance account and payment requirements.
+
+:::
+### Step 4: Create a Checkout Component
+
+- Inside the **src/app** directory, create a new file called **checkout.component.ts**. In this file, define the CheckoutComponent.
+
+- Define a function, **handlePayment**, that calls the **initializeEvarfinanceCheckout** function. This function will be triggered when the **"Pay Now"** button is clicked:
+
+```ts title="checkout.component.ts"
+import { Component } from '@angular/core';
+import { initializeEvarfinanceCheckout } from '../evarfinance';
+
 @Component({
-  selector: 'app-my-component',
-  templateUrl: './my-component.component.html',
-  styleUrls: ['./my-component.component.css']
+  selector: 'app-checkout',
+  template: `
+    <h1>Angular Evarfinance Checkout</h1>
+    <button (click)="handlePayment()">Pay Now</button>
+  `,
 })
-export class MyComponentComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-    // Initialize the Evarfinance Checkout module
-    EvarfinanceCheckout.init({
-      api_key: 'YOUR API KEY',
-      app_id: 'YOUR APP ID',
-      amount: '100',
-      title: 'Test Payment',
-      customer_email_address: 'customer1@example.com',
-      customer_full_name: 'Customer 1',
-      mode: 'DEVELOPMENT',
-      onSuccess: (response: any) => {
-        console.log('Payment succeeded', response);
-      },
-      onCancel: (response: any) => {
-        console.log('Payment canceled', response);
-      },
-      onFailure: (response: any) => {
-        console.log('Payment failed', response);
-      },
-    });
-  }
-
-  openPayment(): void {
-    // Call the Evarfinance Checkout module when the button is clicked
-    EvarfinanceCheckout.open();
+export class CheckoutComponent {
+  handlePayment() {
+    initializeEvarfinanceCheckout();
   }
 }
-
 ```
 
-:::note please note
+:::tip quick tip
 
-- In the code above, the ngOnInit method is used to initialize the Evarfinance Checkout module when the component is initialized.
-
-- The **openPayment** method is bound to the button's (click) event. When the button is clicked, it calls the **openPayment** method, which in turn calls the **EvarfinanceCheckout.open** function to trigger the payment process.
+- The **handlePayment** method is bound to the button's (click) event. When the button is clicked, it calls the **handlePayment** method, which in turn calls the **initializeEvarfinanceCheckout()** function to trigger the payment process.
 
 :::
 
-### Add a button
+### Step 5: Register the Checkout Component
 
-In the ***checkout.component.html*** file, add the necessary HTML markup and Angular bindings for your checkout component. Include a button to trigger the payment process:
-
-```html title="checkout.component.html"
-<div>
-  <!-- Your component content here -->
-  <button (click)="openPayment()">Pay Now</button>
-</div>
-```
-
-:::note please note
-
-- Customize the component content and button as per your specific design and functionality requirements.
-
-:::
-
-### Import the CheckoutComponent
-
-In the main **app.module.ts** file, import the CheckoutComponent and add it to the declarations array:
+- Inside the **src/app/app.module.ts** file, import and register the CheckoutComponent:
 
 ```ts title="app.module.ts"
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './checkout.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CheckoutComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, CheckoutComponent],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 
 ```
-:::note please note
 
-- And also remember to replace **'YOUR API KEY'** and **'YOUR APP ID'** in the component file with your actual **API key** and **APP ID** provided by Evarfinance.
+### Step 6: Update the App Component
+
+Inside the **src/app/app.component.html** file, update its contents as follows:
+
+```html title="app.component.html"
+<h1>Welcome to My Angular App</h1>
+<app-checkout></app-checkout>
+
+```
+- With these steps, you have successfully integrated the Evarfinance checkout in an Angular project. The CheckoutComponent will be rendered within the AppComponent, and the **initializeEvarfinanceCheckout()** function will handle the payment process when the **"Pay Now"** button is clicked.
+
+- You can handle the payment events using the provided **onSuccess**, **onCancel**, and **onFailure** callback functions.
+
+:::note please note
+- Feel free to customize the component content and button as per your specific design and functionality requirements. You can add additional components, styles, or logic within the component.
+
+- Remember to replace the placeholder values like **'YOUR API KEY'**, **'YOUR APP ID'**, **Email address**, and other details with your actual Evarfinance **API key**, **app ID**, and **customer information**.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
-
 :::

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Vanilla js
@@ -12,7 +12,7 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 :::
 
-### Include the Evarfinance Checkout in your HTML
+### Step 1: Include the Evarfinance Checkout in your HTML
 
 Include the Evarfinance Checkout library in your HTML file (e.g., **index.html**)  by adding the following script tag:
 
@@ -20,7 +20,7 @@ Include the Evarfinance Checkout library in your HTML file (e.g., **index.html**
 <script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"></script>
 ```
 
-### Create a JavaScript file
+### Step 2: Create a JavaScript file
 
 Create a JavaScript file (e.g., **app.js**) and add the following code to initialize the Evarfinance Checkout module and handle the button click event:
 
@@ -46,27 +46,20 @@ function initEvarfinanceCheckout() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  initEvarfinanceCheckout();
-
   const paymentButton = document.getElementById('paymentButton');
 
   paymentButton.addEventListener('click', function() {
-    EvarfinanceCheckout.open();
+   initEvarfinanceCheckout();
   });
-});
-
 ```
 
 :::note please note
 
-- In the above code we wait for the DOM content to load and then call the initEvarfinanceCheckout function when the DOM is ready.
-
-- We also got a reference to the payment button and called the Evarfinance Checkout module when the button is clicked.
+- We got a reference to the payment button and called the Evarfinance Checkout module when the button is clicked.
 
 :::
 
-### Update the HTML file
+### Step 3: Update the HTML file
 
 - In the HTML file, include a button element with an ***id*** of **paymentButton**:
 
@@ -98,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
 ```
 :::note please note
 
-- Replace **'YOUR API KEY'** and **'YOUR APP ID'** in the **app.js** file with your actual **API key** and **APP ID** provided by Evarfinance.
+- Feel free to customize the component content and button as per your specific design and functionality requirements. You can add additional components, styles, or logic within the component.
+
+- Remember to replace the placeholder values like **'YOUR API KEY'**, **'YOUR APP ID'**, **Email address**, and other details with your actual Evarfinance **API key**, **app ID**, and **customer information**.
 
 - Also remember to change the **mode** when deploying on a live/production system and all other parameters should be updated correctly.
-
-- Customize the code to suit your specific design and functionality requirements. You can modify the button styling, add additional event listeners, or include other elements as needed.
 
 :::
