@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # HTML
@@ -12,28 +12,32 @@ Don't have API keys? go to the **Generate API keys section** Before proceeding.
 
 :::
 
-### Add script
+### Step 1: Create a new HTML file
+
+Create a new HTML file using your preferred text editor and save it with a **.html extension**, for example, **checkout.html**.
+
+### Step 2: Add script
 
 Add CDN script tag with the evarfinance url
 
-```bash
+```html title="index.html"
 <script src="https://unpkg.com/evarfinance-checkout/dist/bundle.js"> </script>
 ```
 
-### checkout container
+### Step 3: Checkout container
 
-Initialize the evarfinance checkout container on your checkout page. this can be done with click of a button
+Inside the HTML file, add the necessary HTML structure for your checkout page. This may include elements such as a form, input fields, and a button for initiating the payment process.
 
 - Replace the **api_key** and **app_id** with your generated keys. If you have not done that then proceed to the **generate api keys** section to generate your own keys
 
 - Replace the amount, title, customer_email_address, and customer_full_name with the correct details.
 
-```bash
+```html title="index.html"
  <evarfinance-checkout-container
         embedded="true"
         config='{
-            "api_key": "d24f90f809cc4697_5592bbcc96243e193a3bc0b447e4068e7b6c2de512c3edc9deb07735b9eb05b473820fa5a180c5ada76ae295bdbe4f149709e57daa3d01b9a7dad95cfb0804fcda05f37a9716f3469a90caa2973d0a24cc0c8a2aabc36f49a8bd2091118826f9",
-            "app_id": "2ba187115812597e_ccd6c52a648839ba732149d848cb149b88a1c5d988d38405f1b5f737eb0453e88e61cca1bab908f0450255445531154e",
+            "api_key": "YOUR_API_KEY",
+            "app_id": "YOUR_APP_ID",
             "amount": "100",
             "title": "Test Payment",
             "customer_email_address": "customr1@email.com",
@@ -45,8 +49,8 @@ Initialize the evarfinance checkout container on your checkout page. this can be
 
 - This is what your index.html file should look like
 
-```bash
- <!DOCTYPE html>
+```html title="index.html"
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -55,11 +59,12 @@ Initialize the evarfinance checkout container on your checkout page. this can be
     <title>Sample code</title>
   </head>
   <body>
+    <!-- Add the container element for the Evarfinance Checkout -->
     <evarfinance-checkout-container
       embedded="true"
       config='{
-            "api_key": "d24f90f809cc4697_5592bbcc96243e193a3bc0b447e4068e7b6c2de512c3edc9deb07735b9eb05b473820fa5a180c5ada76ae295bdbe4f149709e57daa3d01b9a7dad95cfb0804fcda05f37a9716f3469a90caa2973d0a24cc0c8a2aabc36f49a8bd2091118826f9",
-            "app_id": "2ba187115812597e_ccd6c52a648839ba732149d848cb149b88a1c5d988d38405f1b5f737eb0453e88e61cca1bab908f0450255445531154e",
+            "api_key": "YOUR_API_KEY",
+            "app_id": "YOUR_APP_ID",
             "amount": "100",
             "title": "Test Payment",
             "customer_email_address": "customr1@email.com",
@@ -71,3 +76,7 @@ Initialize the evarfinance checkout container on your checkout page. this can be
   </body>
 </html>
 ```
+
+:::danger
+Please note that the above code assumes you have the necessary dependencies and configurations set up correctly. Ensure that you have a valid API key and app ID from Evarfinance and that you've included the Evarfinance Checkout script using the provided CDN URL.
+:::
